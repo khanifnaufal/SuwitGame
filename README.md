@@ -24,7 +24,7 @@ Aplikasi web modern untuk bermain permainan Batu Gunting Kertas (Rock Paper Scis
 
 1. **Clone atau Download Project**
    ```bash
-   cd "d:\kuliah\Project After Lulus\SuWin"
+   cd "Your Folder/Folder"
    ```
 
 2. **Install Dependencies**
