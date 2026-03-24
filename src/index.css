@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 ;
+  }
+}
+
+@layer components {
+  .choice-card {
+    @apply flex flex-col items-center justify-center p-4 rounded-xl cursor-pointer transition-all duration-300 hover:scale-110 active:scale-95;
+  }
+
+  .choice-card-inactive {
+    @apply bg-slate-700 hover:bg-slate-600 text-slate-300;
+  }
+
+  .choice-card-active {
+    @apply bg-gradient-to-br from-amber-400 to-amber-500 text-white ring-4 ring-amber-300 shadow-lg shadow-amber-400;
+  }
+
+  .shake-animation {
+    animation: shake 0.5s ease-in-out;
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(-15deg) scale(1.05);
+  }
+  50% {
+    transform: rotate(0deg) scale(1);
+  }
+  75% {
+    transform: rotate(15deg) scale(1.05);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes bounce-in {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.result-animation {
+  animation: slideIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.bounce-animation {
+  animation: bounce-in 0.5s ease-out;
+}
